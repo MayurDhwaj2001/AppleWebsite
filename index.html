@@ -9,6 +9,7 @@
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+
     <title>Account</title>
   </head>
   <body>
@@ -69,14 +70,15 @@
               type="text"
               class="inputtext bdaytext"
               placeholder="Birthday"
+              onclick="active()"
             />
-            <div class="message1">
+            <div class="message1" id="msg">
               <p class="messagetext1">
                 This information is used to determine the <br />
                 services available for your account
               </p>
             </div>
-            <i class="fa fa-question-circle blue question"></i>
+            <i class="fa fa-question-circle blue question" id="mmm"></i>
           </div>
         </div>
         <div class="column">
@@ -127,7 +129,7 @@
               placeholder="Phone Number"
             />
             <div class="message2">
-              <p class="messagetext2">
+              <p class="messagetext1">
                 This phone number will be used to verify <br />
                 your identity and reset your password if <br />
                 you ever forget it

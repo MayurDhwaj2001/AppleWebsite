@@ -141,7 +141,7 @@ input{
     cursor:help;
     position: relative;
     left: 102%;
-    top: -115px;
+    top: -35px;
 }
 .question2{
     cursor:help;
@@ -157,16 +157,8 @@ input{
     height: 80px;
     top: -115px;
     left: 73%;
+    visibility: hidden;
 }
-
-
-.messagetext1{
-    font-size: 13px;
-    padding: 20px;
-    text-align: center;
-    /* -top: 25px; */
-}
-
 
 .message2{
     position: relative;
@@ -175,15 +167,10 @@ input{
     height: 95px;
     top: -130px;
     left: 73%;
-
+    /* display: none; */
 }
 
-.messagetext2{
-    font-size: 13px;
-    padding: 20px;
-    text-align: center;
-    /* -top: 25px; */
-}
+
 
 
 .bday{
@@ -193,6 +180,15 @@ input{
     width: 80%;
     display: inline-block;
 }
+/* .bdaytext:hover + .bday {
+} */
+.messagetext1{
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+    /* -top: 25px; */
+}
+
 .bdaytext{
     align-items: center;
     justify-content: center;
@@ -290,8 +286,4 @@ input{
 
 .radio{
     margin-left: 15px;
-}
-
-.bday{
-    margin-bottom: -90px;
 }
