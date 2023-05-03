@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    margin:0px;
+}
+
+.navbar{
+    background-color: rgba(182, 182, 182, 0.527);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.footer{
+    background-color: rgba(182, 182, 182, 0.527);
+    height: 100px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.blue{
+    color: #0070c9;
+    text-decoration: none;
+}
+.grey{
+    color: #666;
+}
+
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.introh{
+    margin-bottom: 3px;
+}
+
+.introp{
+    margin: 0 auto;
+}
+
+input::placeholder {
+    font-size: larger;
+    text-indent: 20px;
+}
+
+select{
+    height: 50px;
+    width: 80%;
+}
+input{
+    padding-left: 15px;
+}
+
+.form{
+    width: 80%;
+    margin: 0 auto;
+}
+.mainform{
+    /* width: 50%; */
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+}
+.column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.inputtext{
+    margin-top: 20px;
+    height: 50px;
+}
+.half{
+    width: 39%;
+}
+.right{
+    margin-right: 2%;
+
+}
+
+.full{
+    width: 80%;
+    /* margin-right: 10px; */
+
+}
+
+.label{
+    margin-top: 25px;
+    display: inline-block;
+    text-align: left;
+    left: 0;
+}
+
+
+.space{
+    margin-top: 25px;
+}
+
+.line {
+    height: 1px;
+    background-color: rgba(150, 150, 150, 0.527); /* sets the color of the line */
+    margin: 10px 0; /* adds some margin above and below the line */
+    width: 80vw;
+    margin-top: 30px;
+}
+
+.id{
+    font-size: 14px;
+}
+
+.pass{
+    margin-top: 1px;
+}
+
+.mt{
+    margin-top: 10px;
+}
+
+
+.question{
+    cursor:help;
+    position: relative;
+    left: 102%;
+    top: -115px;
+}
+.question2{
+    cursor:help;
+    position: relative;
+    left: 102%;
+    top: -130px;
+}
+
+.message1{
+    position: relative;
+    background-color: rgb(224, 224, 224);
+    width: 320px;
+    height: 80px;
+    top: -115px;
+    left: 73%;
+
+}
+
+.messagetext1{
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+    /* -top: 25px; */
+}
+
+
+.message2{
+    position: relative;
+    background-color: rgb(224, 224, 224);
+    width: 320px;
+    height: 95px;
+    top: -130px;
+    left: 73%;
+
+}
+
+.messagetext2{
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+    /* -top: 25px; */
+}
+
+
+.bday{
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    width: 80%;
+    display: inline-block;
+}
+.bdaytext{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+    display: inline-block;    
+    /* margin-left: 5%; */
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.checkcon{
+    font-size: 11px;
+    margin-left: 5%;
+    margin-top: 0px;
+    /* text-align: center; */
+    /* width: 100%; */
+}
+
+.checkcon2{
+    font-size: 11px;
+    /* margin-left: 4%; */
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.button-70 {
+    background-image: linear-gradient(#0bb6d0, #0b64d1);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: Montserrat,sans-serif;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 20px;
+}
+.continue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.captcha{
+    padding-left: 20px;
+    padding-right: 10px;
+    background-color: #666;
+    margin-top: 20px;
+    height: 45px;
+    font-size: 30px;
+    cursor:not-allowed;
+}
+
+.captchatext{
+    margin-left: 30px;
+    margin-top: 20px;
+    min-width: 100%;
+    font-size: smaller;
+}
+
+.refresh{
+    margin-left: -4%;
+    border: none;
+    background-color: #006fc900;
+    cursor:pointer;
+    margin-top: 20px;
+}
+
+
+.hand{
+    cursor: pointer;
+}
+
+.radio{
+    margin-left: 15px;
+}
+
+.bday{
+    margin-bottom: -90px;
+}
