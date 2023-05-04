@@ -289,7 +289,7 @@ input{
 }
 
 
-#captchatext:focus {
+.green:focus {
     outline: none;
     box-shadow: none;
   }
