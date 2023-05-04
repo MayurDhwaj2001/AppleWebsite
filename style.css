@@ -136,13 +136,13 @@ input{
     margin-top: 10px;
 }
 
-
 .question{
     cursor:help;
     position: relative;
     left: 102%;
-    top: -35px;
+    top: -115px;
 }
+
 .question2{
     cursor:help;
     position: relative;
@@ -167,7 +167,7 @@ input{
     height: 95px;
     top: -130px;
     left: 73%;
-    /* display: none; */
+    visibility: hidden;
 }
 
 
@@ -179,9 +179,9 @@ input{
     margin: auto; 
     width: 80%;
     display: inline-block;
+    margin-bottom: -100px;
 }
-/* .bdaytext:hover + .bday {
-} */
+
 .messagetext1{
     font-size: 13px;
     padding: 20px;
@@ -287,3 +287,9 @@ input{
 .radio{
     margin-left: 15px;
 }
+
+
+#captchatext:focus {
+    outline: none;
+    box-shadow: none;
+  }
