@@ -181,3 +181,77 @@ function botharesame(){
 }
     
     confirmpass.addEventListener("input",botharesame);
+
+
+// Continue after validation
+
+function validate(){
+    const fname=document.getElementById("fname");
+    const fnameval=fname.value;
+    let isfname=false;
+    
+    const lname=document.getElementById("lname");
+    const lnameval=lname.value;
+    let islname=false;
+    
+    const bday=document.getElementById("bday");
+    const bdayval=bday.value;
+    let isbday=false;
+    
+    const mail=document.getElementById("mail");
+    const mailval=mail.value;
+    let ismail=false;
+    
+    const ph=document.getElementById("ph");
+    const phval=ph.value;
+    let isph=false;
+
+
+    if (fnameval.trim() !== ""){
+        isfname=true;
+    }
+    else{
+        isfname=false;
+    }
+    
+    if (lnameval.trim() !== ""){
+        islname=true;
+    }
+    else{
+        islname=false;
+    }
+    
+    if (bdayval.trim() !== ""){
+        isbday=true;
+    }
+    else{
+        isbday=false;
+    }
+    
+    if (mailval.trim() !== ""){
+        ismail=true;
+    }
+    else{
+        ismail=false;
+    }
+    
+    if (phval.trim() !== ""){
+        isph=true;
+    }
+    else{
+        isph=false;
+    }
+
+    if(isfname==true && islname==true && isbday==true && ismail==true && isph==true && captcha==true && passworissame==true ){
+        alert("saved");
+    }
+
+    else{
+        alert("not saved");
+    }
+
+
+}
+
+const vv=document.getElementById("vvvv");
+vv.addEventListener("click",validate);
