@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <title>Account</title>
+  <title>Create Your Apple ID - Apple</title>
 </head>
 
 <body>
@@ -59,7 +59,8 @@
           <option value="Mexico">Mexico</option>
         </select>
         <div class="bday">
-          <input type="text" class="inputtext bdaytext" placeholder="Birthday" name="bday" id="bday" />
+          <input type="date" value="" placeholder="Birthday" min="1899-01-01" max="2230-12-31"
+            class="inputtext bdaytext" name="bday" id="bday" />
           <div class="message1" id="msg">
             <p class="messagetext1">
               This information is used to determine the <br />
@@ -74,7 +75,7 @@
 
         <input type="text" class="inputtext full" placeholder="name@example.com" name="mail" id="mail" />
         <label for="mail" class="id grey">This will be your new Apple ID.</label>
-        <input type="text" class="inputtext full pass green" placeholder="Password" name="pass" id="pass" />
+        <input type="password" class="inputtext full pass green" placeholder="Password" name="pass" id="pass" />
         <div class="message3" id="message3">
           <p class="messagetext2"><b>Password should contain</b> </p>
           <p class=" messagetext2" id="check1"><i class="fa fa-check"></i> Atleast 8 Character </p>
@@ -83,7 +84,7 @@
           <p class=" messagetext2" id="check4"><i class="fa fa-check"></i> Atleast 1 Number </p>
           <p class=" messagetext2" id="check5"><i class="fa fa-check"></i> Atleast 1 Special Character</p>
         </div>
-        <input type="text" class="inputtext full green" placeholder="Confirm Password" name="confirmpass"
+        <input type="password" class="inputtext full green" placeholder="Confirm Password" name="confirmpass"
           id="confirmpass" />
         <div class="line"></div>
         <select id="code" name="code" class="space">
@@ -122,7 +123,7 @@
         <div class="mt">
           <label for="verify" class="mt">Verify with: </label>
           <label class="hand radio">
-            <input type="radio" name="verify" value="text" class="hand" />
+            <input type="radio" name="verify" value="text" class="hand" checked />
             Text Message
           </label>
           <label class="hand radio">
@@ -135,7 +136,7 @@
 
         <div class="checkbox mt">
           <label class="hand" for="announcements">
-            <input type="checkbox" name="announcements" value="male" class="hand" />
+            <input type="checkbox" name="announcements" value="male" class="hand" checked />
             Announcements
             <p class="grey checkcon" class="hand">
               Receive Apple emails and communications including announcements,
@@ -144,7 +145,7 @@
             </p>
           </label>
           <label class="hand" for="more">
-            <input type="checkbox" name="more" value="female" / class="hand mt"> Apps, Music, TV, and More
+            <input type="checkbox" name="more" value="female" / class="hand mt" checked> Apps, Music, TV, and More
             <p class="grey checkcon" class="hand">
               Receive Apple emails and communications including new releases,
               exclusive content, special offers, and marketing and
@@ -184,7 +185,8 @@
             </span>
           </p>
           <div class="continue">
-            <button class="button-70" role="button" id="vvvv">Continue</button>
+            <!-- <button>Continue</button> -->
+            <p class="button-70" role="button" id="save">Continue</p>
           </div>
         </div>
       </div>

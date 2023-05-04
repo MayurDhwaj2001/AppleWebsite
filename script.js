@@ -204,6 +204,21 @@ function validate(){
     
     const ph=document.getElementById("ph");
     const phval=ph.value;
+    
+    
+    
+    const pa=document.getElementById("pass");
+    const paval=ph.value;
+    
+    
+    const cpa=document.getElementById("confirmpass");
+    const cpaval=ph.value;
+
+
+    const cap=document.getElementById("captchatext");
+    const capval=ph.value;
+
+
     let isph=false;
 
 
@@ -212,6 +227,7 @@ function validate(){
     }
     else{
         isfname=false;
+        fname.style.border="2px solid red";
     }
     
     if (lnameval.trim() !== ""){
@@ -219,6 +235,7 @@ function validate(){
     }
     else{
         islname=false;
+        lname.style.border="2px solid red";
     }
     
     if (bdayval.trim() !== ""){
@@ -226,13 +243,16 @@ function validate(){
     }
     else{
         isbday=false;
+        bday.style.border="2px solid red";
     }
     
     if (mailval.trim() !== ""){
-        ismail=true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;                            //validate mail
+        ismail= emailRegex.test(mailval);
     }
     else{
         ismail=false;
+        mail.style.border="2px solid red";
     }
     
     if (phval.trim() !== ""){
@@ -240,18 +260,98 @@ function validate(){
     }
     else{
         isph=false;
+        ph.style.border="2px solid red";
     }
+    
+    
+    
+    if(paval.trim()==""){
+        pa.style.border="2px solid red";
+    }
+    else{
+        pa.style.border="1px solid grey";
+    }
+    
+    
+    if(cpaval.trim()==""){
+        cpa.style.border="2px solid red";
+    }
+    else{
+        cpa.style.border="1px solid grey";
+    }
+    
+    
+    if(capval.trim()==""){
+        cap.style.border="2px solid red";
+    }
+    else{
+        cap.style.border="1px solid grey";
+    }
+
+
 
     if(isfname==true && islname==true && isbday==true && ismail==true && isph==true && captcha==true && passworissame==true ){
         alert("saved");
     }
-
+    
     else{
         alert("not saved");
     }
 
-
 }
 
-const vv=document.getElementById("vvvv");
-vv.addEventListener("click",validate);
+const savedata=document.getElementById("save");
+savedata.addEventListener("click",validate);
+
+
+
+
+
+// check empty field on submit
+const gfname=document.getElementById("fname");
+const glname=document.getElementById("lname");
+const gbday=document.getElementById("bday");
+const gmail=document.getElementById("mail");
+const gph=document.getElementById("ph");
+const gpa=document.getElementById("pass");
+const gcpa=document.getElementById("confirmpass");
+const gcap=document.getElementById("captchatext");
+function greyfname(){
+    gfname.style.border="1px solid grey";
+}
+function greylname(){
+    glname.style.border="1px solid grey";
+}
+function greybday(){
+    gbday.style.border="1px solid grey";
+}
+function greymail(){
+    gmail.style.border="1px solid grey";
+}
+function greyph(){
+
+    const noo=gph.value;
+    if( !isNaN(noo) && !isNaN(parseFloat(noo))){
+        gph.style.border="1px solid grey";
+    }
+    else{
+        gph.style.border="2px solid red";
+    }
+}
+function greypa(){
+    gpa.style.border="1px solid grey";
+}
+function greycpa(){
+    gcpa.style.border="1px solid grey";
+}
+function greycap(){
+    gcap.style.border="1px solid grey";
+}
+gfname.addEventListener("input",greyfname);
+glname.addEventListener("input",greylname);
+gbday.addEventListener("input",greybday);
+gmail.addEventListener("input",greymail);
+gph.addEventListener("input",greyph);
+gpa.addEventListener("input",greygpa);
+gcpa.addEventListener("input",greycpa);
+gcap.addEventListener("input",greycap);
