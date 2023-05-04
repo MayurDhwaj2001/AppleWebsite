@@ -65,10 +65,11 @@ fromcheck.addEventListener("input",checkcaptcha);
 
 const pass=document.getElementById("pass");
 const confirmpass=document.getElementById("confirmpass");
-
+let satisfied=false;    
+let passworissame=false;    
 function checkpass(){
-
     const passval=pass.value;
+
     const passlen=pass.value.length;
 
     const capital = /[ABCDEFGHIJKLMNOPQRSTUVWXYZ]/;
@@ -79,26 +80,60 @@ function checkpass(){
     const containssmall = small.test(passval);
     const containsnum = numbers.test(passval);
     const containssymbol = symbols.test(passval);
-    let passsatisfied=0;
-    
+
+    const check01=document.getElementById("check1");
+    const check02=document.getElementById("check2");
+    const check03=document.getElementById("check3");
+    const check04=document.getElementById("check4");
+    const check05=document.getElementById("check5");
+
+
     if(passlen<8){                                         
         console.log("Should be more than 7");
+        check01.style.color="red";
     }
+    else{
+        check01.style.color="green";
+    }
+        
     if(!containscap){                                      
         console.log("Contains Capital Case");
+        check02.style.color="red";
     }
+    else{
+        check02.style.color="green";
+    }
+    
     if(!containssmall){
         console.log("Contains Small Case");
+        check03.style.color="red";
     }
+    else{
+        check03.style.color="green";
+    }
+    
     if(!containsnum){
         console.log("Contains Numbers");
+        check04.style.color="red";
     }
+    else{
+        check04.style.color="green";
+    }
+    
     if(!containssymbol){
         console.log("Contains Symbols");
+        check05.style.color="red";
     }
+    else{
+        check5.style.color="green";
+    }
+
+
     if(passlen>7 && containscap && containssmall && containsnum && containssymbol){
         console.log("satisfy");             
         pass.style.border="2px solid green" ;                  
+        setTimeout(passpophidden,2000);
+        satisfied=true;
     }
     else{
         pass.style.border="1px solid grey" ;                  
@@ -106,3 +141,43 @@ function checkpass(){
 }
 
 pass.addEventListener("input",checkpass);
+
+
+
+
+// password popup
+
+const pop=document.getElementById("message3");
+
+function passpop(){
+    pop.style.visibility="visible";
+}
+function passpophidden(){
+    pop.style.visibility="hidden";
+}
+
+pass.addEventListener("input",passpop);
+pass.addEventListener("click",passpop);
+pass.addEventListener("blur",passpophidden);
+
+
+// check from confirm password
+function botharesame(){
+
+    const p1= pass.value;
+    const p2= confirmpass.value;
+    if(p1==p2 && satisfied==true){
+        confirmpass.style.border="2px solid green";
+        passworissame=true;
+    }
+    else if(p2.length>7){
+        confirmpass.style.border="2px solid red";
+    }
+
+    else{
+        confirmpass.style.border="1px solid grey";
+
+    }
+}
+    
+    confirmpass.addEventListener("input",botharesame);
