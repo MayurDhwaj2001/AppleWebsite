@@ -1,1 +1,1 @@
-# https://htmlpreview.github.io/?https://github.com/MayurDhwaj2001/AppleWebsite/blob/main/index.html
+https://mayurdhwaj2001.github.io/AppleWebsite/
